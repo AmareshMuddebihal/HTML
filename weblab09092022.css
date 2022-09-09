@@ -1,0 +1,41 @@
+
+
+
+
+
+<DOCTYPE html> <html lang="en">
+<head> <mete charset="UTF-8">
+http squiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University website Design</title>
+
+<link rel="stylesheet" href="style.css">
+<link cel- "acsconnect" href="https://fonts.googleapis.com">
+self preconnect" href="https://fonts.estatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://con.Isdeliver.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+</head>
+
+<section class="header">
+nav>
+<a href="index.html"><img src="images/logo.png" alt="Unly Logo"></a>
+<div class="nav-links" id="navlinks">
+<jclass="fa-solid fa-gmark"onclick="hidemeny()"></P
+cup <li>ca href=">Homes/a></li>
+<lixca href=">About</a></li>
+
+<li><a href="">Course</a></li>
+clixca href- >Blog</a></1>
+<li><a href-">Contact</a></li
+/up </div>
+<i class="fa-solid fa-bars" onclick="showmenu()"></p
+nav>
+<div class="text-box">
+chi>
+
+Alliance - World class University </h1>
+<p>
+Alliance University is a Private University established in Karnataka State <br>by Act No.34 of year 2010 and is recognized by the University Grants
+Commission (UGC), New Delhi
+<a href- "class="hero-btn" >Visit us to know more</a>
+</section>
