@@ -5,94 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        table {
+            margin: 0 auto;
+            width: 300px;
+            border-collapse: collapse;
+        }
+    
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        #forgotAlert {
+            margin-bottom: 20px;
+        }
+    
+        .form-group {
+            margin-bottom: 20px;
+        }
+    
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .input-group label {
+            margin-bottom: 5px;
+        }
+    
+        .input-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        .myBtn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1 align= center>Alliance College of Engineering and Design</h1>
-    <h3 align= center font-size:"5"> Welcome you All</h3> 
-    <h3 align= center> Anekal, bengaluru </h3></br>
-    <hr>
-
-    <h1>display a form Registraton</h1>
-    <table border="0"><tr><th colspan="2" >Student Form Registraton</th></tr>
-    <tr><td><label for ="un">user Id: </label>
-    <td> <input type=text name"tun" placeholder="Enter your Registraton ID" size="50">  </tr>
-    <td> <label for ="un\\pwd">Password: </label>  </td> 
-    <td>  <input type=text name"tpd" placeholder=" "></td></tr>
-    <td><label for ="un">Name: </label></td>
-    <td> <input type=text name"tpd" placeholder=" "> </td></tr>
-    <td><label for ="un">Address: </label></td>
-    <td> <input type=text name"tpd" placeholder="" > </td></tr>
-    <td><label for ="con">Country: </label></td>
-    <td> <select country="s"><option value="CSE" >CSE</option><option value="IT" >IT</option><option value="MECH" >MECH</option><option value="ECE" >ECE</option><placeholder="Please select a Country" ></option> </td></tr>
-    <td><label for ="un">Zip code: </label></td>
-    <td> <input type=text name"tpd" placeholder="" > </td></tr>   
-    <td><label for ="un">Email: </label></td>
-    <td> <input type=text name"tpd" placeholder="" > </td></tr>
-    <td><label for ="un">color: </label></td>
-    <td> <input type="color" name"tpd" placeholder="" > </td></tr>
-    <td><label for ="un">Choose date: </label></td>
-    <td> <input type="date" name"tpd" placeholder="" > </td></tr>
-    <td><label for ="un">Sex: </label></td>
-    <td> <input type="radio" name="tr1" value="Male" >Male
-        <input type="radio" name="tr1" value="female" >female </td></tr>
-    <td><label for ="un">Language: </label></td>
-    <td> <input type="checkbox" name"tb1" value="Java" > java
-        <input type="checkbox" name"tb1" value="Dotnet" >Dotnet</td></tr>
-    <td><label for ="un">Choose File: </label></td>
-    <td> <input type="file" name"tpd" placeholder=" Choose File" > </td> </tr>
-    <td><label for ="un">About: </label></td>
-    <td> <input type="text" name"tpd" placeholder="              " aria-setsize="50"  > </td></tr>
-    <td><button> Submit</button></td> </tr>
-
-    </table>
-    <hr>
-
-    <h1>displaying a Mail tag to screen</h1>
-    <h2>Email:</h2>
-    <a href = "amareshsm123@gmail.com?">
-        click to send Email
-        </a>
-        
-        
-        <hr>
-
-    <h1>displaying an image tag in screen</h1>
-    <img src="newimage.jfif" alt="Alliance">
-
-    <hr>
-
-
-
-
-
-
-        
-    
-
-
-       
-
-    
-    </tr>
-    
-    
-    
-    
-    
-    
-    
-    
-    </table>
+<body align="center"  style="background-color: color-mix(in srgb-linear, #1231bd 50%, #eb6105 50%);" >
    
-    <h2 align= center></h2>
+    <table border="0" align="center"><tr><th colspan="2" >Student Form Registraton</th></tr>
+  
 
-    <tr> lable
-    </tr>
+    <table align="center" style="background-color: color-mix(in srgb-linear, #1231bd 100%, #df600c 100%);">
 
+
+    <form id="myForm">
+        
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="name">Password:</label>
+        <input type="text" id="name" name="name" required>
+    </br>
+    <br>
+        <button type="button" onclick="submitForm()">Submit</button>
+</br>
+
+<br>
+<button type="button" ><a  href="forgot.html">Forgot Password</a></button>
+</br>
+      </form>
+    </table>
+      
+      <script>
+        function validateForm(form) {
+          const name = form.name.value;
+          const email = form.email.value;
+          const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+      
+          if (!name || !email) {
+            alert('Please fill out all required fields');
+            return false;
+          }
+      
+          if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return false;
+          }
+      
+          return true;
+        }
+      
+        function submitForm() {
+          const form = document.getElementById('myForm');
+          if (!validateForm(form)) {
+            return;
+          }
+          form.submit();
+        }
+      </script> 
     
-
-
-
-
+    
+   
 </body>
 </html>
